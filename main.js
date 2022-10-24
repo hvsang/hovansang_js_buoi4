@@ -180,7 +180,6 @@ function read() {
     var readHundred;
     var readTen;
     var readUnit;
-    var result1;
     var result = "";
 
     switch (hundred) {
@@ -212,7 +211,6 @@ function read() {
             readHundred = "Chín trăm ";
             break;
         default:
-            result1 = "<p>Số không hợp lệ</p>";
             break;
     }
 
@@ -245,7 +243,6 @@ function read() {
             readTen = "chín mươi ";
             break;
         default:
-            result1 = "<p>Số không hợp lệ</p>";
             break;
     }
 
@@ -278,7 +275,6 @@ function read() {
             readUnit = "chín.";
             break;
         default:
-            result1 = "<p>Số không hợp lệ</p>";
             break;
     }
 
@@ -287,7 +283,6 @@ function read() {
     result += readUnit;
 
     document.getElementById("infoRead").innerHTML = result;
-    // document.getElementById("infoRead").innerHTML = result1;
     document.getElementById("infoRead").classList.add("alert-success");
 }
 
