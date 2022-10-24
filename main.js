@@ -1,3 +1,18 @@
+/**
+ * bai1
+ *  + dau vao:
+ *          - 3 so nguyen
+ *  + xu ly:
+ *          - neu a < b && a < c && b < c thi a<b<c
+ *          - neu a < b && a < c && c < b thi a<c<b
+ *          - neu b < a && b < c && a < c thi b<a<c
+ *          - neu b < a && b < c && c < a thi b<c<a
+ *          - neu c < a && c < b && a < b thi c<a<b
+ *          - neu c < a && c < b && b < a thi c<b<a
+ *  + dau ra: 
+ *          - in ket qua ra man hinh
+ */
+
 function arrange(a, b, c) {
     var arrange;
     if (a < b && a < c && b < c) {
@@ -10,7 +25,7 @@ function arrange(a, b, c) {
         arrange = b + " < " + c + " < " + a;
     } else if (c < a && c < b && a < b) {
         arrange = c + " < " + a + " < " + b;
-    } else {
+    } else if (c < a && c < b && b < a) {
         arrange = c + " < " + b + " < " + a;
     }
     return arrange;
@@ -26,6 +41,16 @@ function sapXep() {
     document.getElementById("infoSapXep").classList.add("alert-success");
 }
 
+/**
+ * bai 2:
+ *  + dau vao:
+ *          - chon thanh vien
+ *  + xu ly:
+ *          - xin chao member:
+ *  + dau ra:
+ *          - in ket qua ra man hinh
+ */
+
 function welcome() {
     var member = document.getElementById("member").value;
     var result = "";
@@ -39,6 +64,19 @@ function welcome() {
     document.getElementById("infoHello").classList.add("alert-success");
 
 }
+
+/**
+ * bai 3
+ *  + dau vao:
+ *          - 3 so nguyen
+ *  + xu ly:
+ *          - neu a%2==0 : count++
+ *          - neu b%2==0 : count++
+ *          - neu c%2==0 : count++
+ *          - so le = 3 - so chan
+ *  + dau ra: 
+ *          - in ket qua ra man hinh
+ */
 
 function count(a, b, c) {
     var count = 0;
@@ -70,6 +108,18 @@ function countChanLe() {
     document.getElementById("infoCount").classList.add("alert-success");
 }
 
+/**
+ * bai 4
+ *  + dau vao:
+ *          - 3 canh tam giac
+ *  + xu ly:
+ *          - neu edge1 == edge2 == edge3 : tam giac deu
+ *          - neu edge1 == edge2 || edge1 == edge3 || edge2 == edge3: tam giac can
+ *          - neu Math.sqrt((edge1 * edge1) + (edge2 * edge2)) == edge3 || Math.sqrt((edge1 * edge1) + (edge3 * edge3)) == edge2 || Math.sqrt((edge2 * edge2) + (edge3 * edge3)) == edge1: tam giac vuong
+ *  + dau ra: 
+ *          - in ket qua ra man hinh
+ */
+
 function tamGiac() {
     var edge1 = document.getElementById("edge1").value * 1;
     var edge2 = document.getElementById("edge2").value * 1;
@@ -89,6 +139,10 @@ function tamGiac() {
 
     document.getElementById("infoGuess").classList.add("alert-success");
 }
+
+/**
+ * bai 5
+ */
 
 function yesterday() {
     var day = document.getElementById("day").value * 1;
@@ -140,6 +194,17 @@ function yesterday() {
     console.log(day, month, year);
 }
 
+/**
+ * bai 6
+ *  + dau vao:
+ *          - month, year
+ *  + xu ly:
+ *          - neu month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12 : co 31 ngay
+ *          - neu month == 4 || month == 6 || month == 9 || month == 11 : co 30 ngay
+ *          - month == 2 : neu year % 4 === 0 && year % 100 !== 0 thi co 29 ngay nguoc lai cos 28 ngay
+ *  + dau ra:
+ *          - in ket qua ra man hinh
+ */
 
 function day() {
     var month = document.getElementById("month6").value * 1;
@@ -171,6 +236,21 @@ function day() {
 
     document.getElementById("infoDay").classList.add("alert-success");
 }
+
+/**
+ * bai 7
+ *  + dau vao:
+ *          - so co 3 chu so
+ *  + xu ly:
+ *          - hundred = Math.floor(number / 100)
+ *          - ten = Math.floor(number % 100 / 10)
+ *          - unit = number % 10
+ *          - neu hundred = 1 : mot tram .....
+ *          - neu ten = 1 : muoi .......
+ *          - neu unit = 1 : mot ........
+ *  + dau ra:
+ *          - in ket qua ra man hinh
+ */
 
 function read() {
     var number = document.getElementById("number").value * 1;
@@ -285,6 +365,21 @@ function read() {
     document.getElementById("infoRead").innerHTML = result;
     document.getElementById("infoRead").classList.add("alert-success");
 }
+
+/**
+ * bai 8
+ *  + dau vao:
+ *          - ten1, x1, y1, ten2, x2, y2, ten3, x3, y3, x4, y4
+ *  + xu ly: 
+ *          - d1 = Math.sqrt(((x1 - x4) * (x1 - x4)) + ((y1 - y4) * y1 - y4));
+            - d2 = Math.sqrt(((x2 - x4) * (x2 - x4)) + ((y2 - y4) * y2 - y4));
+            - d3 = Math.sqrt(((x3 - x4) * (x3 - x4)) + ((y3 - y4) * y3 - y4));
+            - max = d1
+            - neu d2>max : max=d2
+            - neu d3>max : max=d3
+    + dau ra:
+            - in ket qua ra man hinh
+ */
 
 function timSLN(a, b, c) {
     var max = a;
