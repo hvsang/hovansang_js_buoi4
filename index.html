@@ -31,7 +31,7 @@
                             <label for="">Number 3</label>
                             <input id="number3" type="text" class="form-control">
                         </div>
-                        <button id="btnSapXep" class="btn btn-success">Sắp xếp</button>
+                        <button id="btnSapXep" class="btn btn-success" onclick="sapXep()">Sắp xếp</button>
                     </div>
                     <div id="infoSapXep" class="card-footer text-muted">
 
@@ -56,7 +56,7 @@
                                 <option value="Em gái">Em gái</option>
                             </select>
                         </div>
-                        <button id="btnHello" class="btn btn-success">Gửi lời chào</button>
+                        <button id="btnHello" class="btn btn-success" onclick="welcome()">Gửi lời chào</button>
                     </div>
                     <div id="infoHello" class="card-footer text-muted">
                     </div>
@@ -83,7 +83,7 @@
                             <label for="">Number 3</label>
                             <input id="num3" type="text" class="form-control">
                         </div>
-                        <button id="btnCount" class="btn btn-success">Đếm</button>
+                        <button id="btnCount" class="btn btn-success" onclick="countChanLe()">Đếm</button>
                     </div>
                     <div id="infoCount" class="card-footer text-muted">
                     </div>
@@ -110,9 +110,143 @@
                             <label for="">Cạnh 3</label>
                             <input id="edge3" type="text" class="form-control">
                         </div>
-                        <button id="btnGuess" class="btn btn-success">Dự đoán</button>
+                        <button id="btnGuess" class="btn btn-success" onclick="tamGiac()">Dự đoán</button>
                     </div>
                     <div id="infoGuess" class="card-footer text-muted">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Bài 5
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="">Ngày</label>
+                            <input id="day" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Tháng</label>
+                            <input id="month" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Năm</label>
+                            <input id="year" type="text" class="form-control">
+                        </div>
+                        <button id="btnYesterday" class="btn btn-success" onclick="yesterday()">Ngày hôm qua</button>
+                        <button id="btnTomorrow" class="btn btn-success" onclick="tomorrow()">Ngày mai</button>
+                    </div>
+                    <div id="infoYesterday" class="card-footer text-muted">
+                    </div>
+                    <div id="infoTomorrow" class="card-footer text-muted">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Bài 6
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="">Tháng</label>
+                            <input id="month6" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Năm</label>
+                            <input id="year6" type="text" class="form-control">
+                        </div>
+                        <button id="btnDay" class="btn btn-success" onclick="day()">Tính ngày</button>
+                    </div>
+                    <div id="infoDay" class="card-footer text-muted">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Bài 7
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="">Nhập 3 chữ số</label>
+                            <input id="number" type="text" class="form-control">
+                        </div>
+                        <button id="btnRead" class="btn btn-success" onclick="read()">Đọc số</button>
+                    </div>
+                    <div id="infoRead" class="card-footer text-muted">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Bài 8
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="">Nhập tên sv1</label>
+                            <input id="name1" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nhập tọa độ x sv1</label>
+                            <input id="x1" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nhập tọa độ y sv1</label>
+                            <input id="y1" type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Nhập tên sv2</label>
+                            <input id="name2" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nhập tọa độ x sv2</label>
+                            <input id="x2" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nhập tọa độ y sv2</label>
+                            <input id="y2" type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Nhập tên sv3</label>
+                            <input id="name3" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nhập tọa độ x sv3</label>
+                            <input id="x3" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nhập tọa độ y sv3</label>
+                            <input id="y3" type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Nhập tọa độ x trường</label>
+                            <input id="x4" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nhập tọa độ y trường</label>
+                            <input id="y4" type="text" class="form-control">
+                        </div>
+                        <button id="btnFind" class="btn btn-success" onclick="find()">Tìm</button>
+                    </div>
+                    <div id="infoFind" class="card-footer text-muted">
                     </div>
                 </div>
             </div>
